@@ -1,0 +1,11 @@
+cargaurl.py
+leerfichero.py
+split001.py
+split.py
+tokenizar.py
+
+sourcetestv1.py
+simpletokenizerv1.py
+
+sourcetestv2.py
+simpletokenizerv2.py

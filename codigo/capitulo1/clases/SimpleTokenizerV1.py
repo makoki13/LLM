@@ -1,5 +1,5 @@
 import re
-from clases.SourceText import SourceText
+from codigo.capitulo1.clases.sourcetextv1 import SourceText
 
 class SimpleTokenizerV1:
     def __init__(self, vocab) -> None:
@@ -19,16 +19,21 @@ class SimpleTokenizerV1:
         text = re.sub(r'\s+([,.?!"()\'])', r'\1', text)
         return text
     
-'''
-Descomentar para pruebas
-url = (
-    "https://raw.githubusercontent.com/rasbt/" 
-    "LLMs-from-scratch/main/ch02/01_main-chapter-code/" 
-    "the-verdict.txt") 
+if __name__ == "__main__":
+    """
+    Bloque de ejecución directa:
+    - Pruebas rápidas de desarrollo
+    - Demostración de uso de la clase
+    - No se ejecuta al importar el módulo
+    """
+    url = (
+        "https://raw.githubusercontent.com/rasbt/" 
+        "LLMs-from-scratch/main/ch02/01_main-chapter-code/" 
+        "the-verdict.txt") 
 
-vocab = SourceText().get(url)
+    vocab = SourceText().get(url)
 
-tokenizer = SimpleTokenizerV1(vocab) 
-text = """"It's the last he painted, you know," Mrs. Gisburn said with pardonable pride.""" 
-ids = tokenizer.encode(text) 
-print(ids)'''
+    tokenizer = SimpleTokenizerV1(vocab) 
+    text = """"It's the last he painted, you know," Mrs. Gisburn said with pardonable pride.""" 
+    ids = tokenizer.encode(text) 
+    print(ids)
